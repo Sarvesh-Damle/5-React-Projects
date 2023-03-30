@@ -1,38 +1,30 @@
+body{
+  margin: 0;
+  padding: 0;
+}
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.top{
+  text-decoration: underline;
+  background-color: lavender;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Hero{
+  border: 2px solid black;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Todo{
+  margin-top: 1px;
+  border: 2px solid black;
 }
-
-.App-link {
-  color: #61dafb;
+.Quiz{
+  margin-top: 1px;
+  border: 2px solid black;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.SpaceNews{
+  margin-top: 1px;
+  border: 2px solid black;
+}
+.VideoGame{
+  margin-top: 1px;
+  border: 2px solid black;
 }
