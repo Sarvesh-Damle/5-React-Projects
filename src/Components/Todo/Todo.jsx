@@ -7,9 +7,19 @@ const Todo = () => {
   const inputTask = useRef(null)
 
   const addTask = () => {
-    setTodo([...todo, { task: currentTask, completed: false }]);
-    inputTask.current.value = "";
-    setCurrentTask("")
+    if (currentTask.trim() !== "") {
+      if (todo.some((task) => task.task === currentTask)) {
+        alert("Task with the same name already exists!");
+      } else {
+        setTodo([...todo, { task: currentTask, completed: false }]);
+        inputTask.current.value = "";
+        setCurrentTask("");
+      }
+    }
+    else {
+      alert("Please enter a valid task");
+    }
+    
   }
   const deleteTask = (taskToDelete) => {
     setTodo(todo.filter((t) => {
@@ -22,6 +32,7 @@ const Todo = () => {
       return t.task === taskToComplete ? { task: taskToComplete, completed: true } : { task: t.task, completed: t.completed }
     }))
   }
+  
 
   return (
     <div>

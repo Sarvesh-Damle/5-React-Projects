@@ -8,7 +8,7 @@
     margin: 0;
 }
 .newsContainer{
-    background-color: bisque;
+    background-color: white;
     width: 100%;
     display: flex;
     flex-direction: column;
