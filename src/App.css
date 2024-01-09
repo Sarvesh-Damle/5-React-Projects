@@ -12,6 +12,9 @@ body{
 .Hero{
   border: 2px solid black;
 }
+.BgChanger{
+  border: 2px solid black;
+}
 .Todo{
   margin-top: 1px;
   border: 2px solid black;
