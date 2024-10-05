@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./VideoGame.css";
 import useSWR from "swr"
+import Swal from 'sweetalert2'
 
 const fetcher = (...args) => fetch(...args).then(response => response.json());
 
@@ -9,6 +10,13 @@ const VideoGame = () => {
   const [searchedGames, setSearchedGames] = useState([]);
   const {data} = useSWR('https://www.cheapshark.com/api/1.0/deals?storeID=1&upperPrice=20&pageSize=3', fetcher)
   const searchGame = () => {
+    if (gametitle === '') {
+      Swal.fire({
+        icon: "error",
+        title: "Search title is empty!",
+      });
+      return;
+    }
     fetch(`https://www.cheapshark.com/api/1.0/games?title=${gametitle}&limit=3`)
       .then((response) => response.json())
       .then((data) => {
